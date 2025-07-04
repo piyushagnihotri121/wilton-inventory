@@ -5,8 +5,12 @@ import os
 
 # Load font
 def get_font(size):
-    font_path = "/System/Library/Fonts/Supplemental/Arial Narrow Bold.ttf"
-    return ImageFont.truetype(font_path, size)
+    try:
+        return ImageFont.truetype("DejaVuSans-Bold.ttf", size)
+    except OSError:
+        return ImageFont.load_default()
+        
+     
 
 # Calculate optimal font size for a label
 def calculate_optimal_font_size(label_width, label_height, sample_text_lines):

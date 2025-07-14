@@ -142,7 +142,7 @@ def create_invoice_labels():
                     f" INVOICE: {invoice_no}",
                     f" SUPPLIER: {supplier_short}\n",
                     f"                       ",
-                    f" ITEM: {item_num}                 ;               PIECE: {piece_num}/{num_pieces}"
+                    f" ITEM: {item_num}    ;   PIECE: {piece_num}/{num_pieces}"
                 ]
 
                 padding = 6

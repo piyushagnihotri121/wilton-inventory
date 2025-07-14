@@ -185,3 +185,13 @@ def create_invoice_labels():
 
 if __name__ == "__main__":
     create_invoice_labels()
+
+
+
+
+st.download_button(
+            label=f"📥 Download Sheet {idx+1}",
+            data=sheet_data,
+            file_name=f"Invoice_Labels_Sheet_{idx+1}.png",
+            mime="image/png"
+        )

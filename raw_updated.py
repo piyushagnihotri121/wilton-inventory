@@ -3,10 +3,12 @@ from PIL import Image, ImageDraw, ImageFont
 import io
 import os
 
-# Function to get font
+ 
+
 def get_font(size):
-    font_path = "/System/Library/Fonts/Supplemental/Arial Narrow Bold.ttf"
+    font_path = "fonts/DejaVuSans-Bold.ttf"
     return ImageFont.truetype(font_path, size)
+
 
 # Function to calculate optimal font size
 def calculate_optimal_font_size(label_width, label_height, sample_text_lines):

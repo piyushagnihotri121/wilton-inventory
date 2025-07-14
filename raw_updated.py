@@ -118,7 +118,7 @@ def create_invoice_labels():
                 if label_count >= MAX_LABELS_PER_SHEET:
                     buf = io.BytesIO()
                     sheet.save(buf, format="PNG", dpi=(DPI, DPI))
-                    st.image(buf, caption=f"Labels Sheet {sheet_number}", use_column_width=True)
+                    st.image(buf, caption=f"Labels Sheet {sheet_number}", use_container_width=True)
                     sheet_number += 1
                     sheet = Image.new("RGB", (A4_WIDTH_PX, A4_HEIGHT_PX), "white")
                     draw = ImageDraw.Draw(sheet)
@@ -174,7 +174,12 @@ def create_invoice_labels():
 
         buf = io.BytesIO()
         sheet.save(buf, format="PNG", dpi=(DPI, DPI))
-        st.image(buf, caption=f"Labels Sheet {sheet_number}", use_column_width=True)
+        st.image(buf, caption=f"Labels Sheet {sheet_number}", use_container_width=True
+                
+                
+                
+                
+                )
 
         st.success(f"✅ SUCCESS! Generated {total_labels} labels across {sheet_number} sheet(s). Font size: {font_size}pt")
 
